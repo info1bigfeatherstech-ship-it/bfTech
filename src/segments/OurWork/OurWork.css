@@ -1,0 +1,248 @@
+:root {
+    --radius: 16px;
+    --accent: #6b5cff;
+    --shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 12px 28px rgba(0, 0, 0, .12);
+}
+
+
+.portfolioOurwork {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 16px;
+    padding-bottom: 50px;
+    margin-top: 130px;
+    background: radial-gradient(var(--primary), transparent 90%);
+
+}
+
+.portfolio__headerOurwork {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.portfolio__headerOurwork h2 {
+    font-size: clamp(24px, 2.5vw, 36px);
+    margin: 0 0 8px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.portfolio__headerOurwork p {
+    color: #555;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+
+.portfolio__gridOurwork {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+.cardOurwork {
+    background: black;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px white;
+
+    transition: transform .25s ease, box-shadow .25s ease;
+
+}
+
+.card:focus-within,
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+
+.card__linkOurwork {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card__mediaOurwork {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+}
+
+.card__mediaOurwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+    transition: transform .35s ease;
+}
+
+.card:hover .card__mediaOurwork img,
+.card:focus-within .card__mediaOurwork img {
+    transform: scale(1.08);
+}
+
+
+.card__bodyOurwork {
+    padding: 16px 16px 18px;
+    display: grid;
+    gap: 10px;
+}
+
+.card__titleOurwork {
+    font-size: 18px;
+    margin: 0;
+    color: white;
+}
+
+.card__descOurwork {
+    color: white;
+    margin: 0;
+    line-height: 1.55;
+}
+
+
+.card__btnOurwork {
+    margin-top: 6px;
+    width: fit-content;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 0;
+    background: var(--primary);
+    ;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(107, 92, 255, .35);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+
+}
+
+.card__btnOurwork:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(107, 92, 255, .35);
+}
+
+.card__btnOurwork:active {
+    transform: translateY(0);
+}
+
+.card__btnOurwork:focus {
+    outline: 2px solid color-mix(in oklab, var(--accent), white 40%);
+    outline-offset: 2px;
+}
+
+
+
+.fade-upOurwork {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp .5s ease forwards;
+    animation-delay: var(--delay, 0ms);
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card,
+    .card__mediaOurwork img,
+    .fade-up {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+
+
+@media (max-width: 850px) {
+    .portfolio__gridOurwork {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolioOurwork{
+        margin-top: 50px !important;
+    }
+     #portfolio-headingOurwork{
+        margin-top: 50px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .portfolioOurwork {
+        margin: 28px auto;
+    }
+
+    .portfolio__gridOurwork {
+        gap: 18px;
+    }
+
+    .card__titleOurwork {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .card__descOurwork {
+        text-align: center;
+    }
+
+    .card__btnOurwork {
+        display: block;
+        margin: auto;
+    }
+     .portfolioOurwork{
+        margin-top: 50px !important;
+    }
+     #portfolio-headingOurwork{
+        margin-top: 50px !important;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    .portfolio__gridOurwork {
+        grid-template-columns: 1fr;
+    }
+
+    .card__bodyOurwork {
+        padding: 14px;
+    }
+
+
+    .card__titleOurwork {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .card__descOurwork {
+        text-align: center;
+    }
+
+    .card__btnOurwork {
+        display: block;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+     .portfolioOurwork{
+        margin-top: 50px !important;
+    }
+    #portfolio-headingOurwork{
+        margin-top: 50px !important;
+    }
+     
+}

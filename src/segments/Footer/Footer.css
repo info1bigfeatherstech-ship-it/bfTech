@@ -1,0 +1,238 @@
+footer{
+    overflow: hidden;
+}
+footer .box-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+footer .logo{
+    width: 310px; 
+    margin-top:-39px;
+    margin-left: -60px;
+}
+.socials-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  text-align: right;
+}
+
+.socials-box h1 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  font-weight: 600;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  color: #fff;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  background: #ff4a4a;
+  transform: scale(1.1);
+}
+.contact-value{
+  font-size: 16px;
+  line-height: 30px;
+  line-break: auto;
+  word-break:keep-all;
+}
+footer .box .title{
+  line-height: 30px;
+}
+
+footer .icon{
+  justify-items: center;
+  margin-top: 5px;
+}
+/* Optional Responsive Tweaks */
+@media (max-width: 600px) {
+  .socials-box {
+    align-items: center;
+    text-align: center;
+  }
+ footer .container{
+    margin-top: -140px;
+  }
+
+  .socials {
+ 
+    justify-content: center;
+  }
+  .socials h1{
+    margin-top: 15px;
+  }
+
+  .socials-box h1 {
+    font-size: 18px;
+  }
+  .contact-value{
+  font-size: 14px;
+  text-align: center;
+ word-break: break-word;
+   /* padding: 12px 16px; */
+   /* margin: 10px auto; */
+    line-height: 1.8;
+}
+}
+
+footer .route {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0.5rem 0;
+  color: var(--text-color);
+  font-size: 19px;
+  line-height: 1.7;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+footer .route:hover{
+    color: var(--primary);
+}
+footer .route.active{
+    color: var(--primary);
+}
+footer .routes{
+    display: block;
+    text-align: center;
+    gap: 8px;
+    margin-top: -10px;
+    margin-left: 80px;
+}
+.footer-bottom {
+    margin-top: -20px;
+    border-top: 2px solid #777;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+.copyright{
+    font-weight: 500;
+}
+/* -------------------------- */
+/* 🔽 MEDIA QUERIES */
+/* -------------------------- */
+
+@media (max-width: 800px) {
+  footer .box-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  footer .logo {
+    width: 240px;
+    margin-top: -20px;
+  }
+
+  .socials-box {
+       
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .routes {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  footer .box-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+    .socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+   .socials-box h1 {
+    order: -1; /* ⬅️ Pushes heading above social icons */
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  footer .box-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  footer .logo {
+    width: 200px;
+    margin: 0 auto -20px;
+  }
+
+  .socials-box {
+    align-items: center;
+    text-align: center;
+  }
+
+    .socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+   .socials-box h1 {
+    order: -1; /* ⬅️ Pushes heading above social icons */
+    font-size: 16px;
+  }
+   .socials a {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  footer .routes {
+    font-size: 17px; /* Consistent on mobile too */
+    margin: 0 auto;
+  }
+
+  footer .route {
+    justify-content: center;
+    font-size: 17px; /* Consistent on mobile too */
+  }
+}
+
+@media (max-width: 350px) {
+  footer .logo {
+    width: 180px;
+  }
+
+  footer .route {
+    font-size: 16px;
+  }
+
+  .socials-box h1 {
+    font-size: 16px;
+  }
+
+  .socials a {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}

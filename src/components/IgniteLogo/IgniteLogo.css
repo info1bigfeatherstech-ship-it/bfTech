@@ -1,0 +1,13 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;              /* Increased spacing between logo and text */
+    padding: 10px 20px;     /* Optional: padding for breathing space */
+  }
+  
+  .logo img {
+    width: 380px;           /* Made logo larger */
+    height: auto;           /* Maintain aspect ratio */
+    max-width: 100%;        /* Prevent overflow on small screens */
+    object-fit: contain;
+  }

@@ -1,0 +1,189 @@
+/* ===== Contact Section ===== */
+#contact {
+    padding: 80px 20px;
+    background: var(--bg-primary);
+    color: var(--color-white);
+  }
+  
+  #contact .container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    align-items: start;
+  }
+  
+  /* ===== Contact Info Cards ===== */
+  .contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .contact-info {
+    display: flex;
+    gap: 20px;
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 1rem;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-info:hover {
+    transform: scale(1.03);
+  }
+  
+  .contact-info .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+  }
+  
+  .contact-info .info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--color-white);
+  }
+  
+  .contact-info .description {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  
+  .contact-info .value {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+    color: var(--color-white);
+  }
+  
+  /* ===== Contact Form ===== */
+  form {
+    background: var(--bg-secondary);
+    border-radius: 1rem;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  form .top {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  form .top .description {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 5px;
+    line-height: 1.5;
+  }
+  
+  form .middle {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  form .control {
+    padding: 12px 15px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #1e1e2f;
+    color: #999;
+    outline: none;
+    resize: none;
+  }
+  
+  form .control::placeholder {
+    color: #999;
+  }
+  
+  form .bottom {
+    text-align: right;
+  }
+  
+  form .btn.primary {
+    background: var(--primary);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form .btn.primary:hover {
+    background: var(--primary-dark);
+  }
+  
+  /* ===== Responsive Breakpoints ===== */
+  
+  /* Tablet (≤900px) */
+  @media screen and (max-width: 900px) {
+    #contact .container {
+      grid-template-columns: 1fr;
+    }
+  
+    form {
+      padding: 25px;
+    }
+  
+    form .top {
+      font-size: 18px;
+    }
+  
+    .contact-info-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .contact-info {
+      flex: 1 1 45%;
+    }
+  }
+  
+  /* Mobile (≤500px) */
+  @media screen and (max-width: 500px) {
+    #contact {
+      padding: 60px 15px;
+    }
+  
+    .contact-info-wrapper {
+      flex-direction: column;
+    }
+  
+    .contact-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .contact-info .icon {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+  
+    form .control {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  
+    form .btn.primary {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

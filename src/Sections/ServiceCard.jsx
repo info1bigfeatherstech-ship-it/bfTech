@@ -69,20 +69,22 @@ const cardData = [
 const SectionCard = () => {
   return (
     <section className="cards-section" style={{marginTop:"100px"}}>
-        <div className="card-title">
-                    <h2 style={{marginBottom:"10px"}}>Our Services</h2>
-                    <h4 style={{marginBottom:"18px"}}>Empowering Your Business with Tailored IT Solutions</h4>
-                </div>
+      <div className="cards-header">
+        <h2 className="cards-header__title">Our Services</h2>
+        <p className="cards-header__subtitle">
+          Empowering Your Business with Tailored IT Solutions
+        </p>
+      </div>
       <div className="cards-container">
         {cardData.map((card, index) => (
           <div className="card-box" key={index}>
             <div className="card-icon">{card.icon}</div>
-            <h3 className="card-title">{card.title}</h3>
+            <h3 className="card-box__title">{card.title}</h3>
             <p className="card-desc">{card.description}</p>
-                <NavLink to="/contact">
-                <button className="card-btn">Explore →</button>
-                </NavLink>          
-                </div>
+            <NavLink to="/contact" className="card-btn">
+              Explore <span aria-hidden="true">→</span>
+            </NavLink>
+          </div>
         ))}
       </div>
     </section>

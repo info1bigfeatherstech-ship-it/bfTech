@@ -4,6 +4,7 @@ import { navRoutes } from '../../data';
 import { cssPerfectShape } from '../../util';
 import { NavLink} from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
+import SocialMenu from '../SocialMenu';
 const Sidebar = ({open, onClose}) => {
   return (
     <div className={`sidebar ${open && "active"}`}>
@@ -19,11 +20,7 @@ const Sidebar = ({open, onClose}) => {
              {
                     navRoutes.map((route,index)=>(
                       <NavLink to={route.id} 
-                      className="route"
-                       activeClass="active" 
-                       smooth={true}
-                      spy={true} 
-                      offset={-50}
+                      className={({ isActive }) => `route${isActive ? ' active' : ''}`}
                        key={index}
                         onClick={onClose} // ✅ This closes the menu when clicked
                        >
@@ -31,6 +28,9 @@ const Sidebar = ({open, onClose}) => {
                         </NavLink>
                     ))
                   }
+        </div>
+        <div className="bottom">
+          <SocialMenu className="sidebar-social-menu" />
         </div>
     </div>
   )

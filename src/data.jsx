@@ -47,23 +47,23 @@ export const navRoutes = [
     name: "Home",
   },
   {
-    id: "about",
+    id: "/about",
     name: "About",
   },
   {
-    id: "portfolio",
+    id: "/portfolio",
     name: "portfolio",
   },
   {
-    id: "UIdesign",
+    id: "/UIdesign",
     name: "UI Design",
   },
   {
-    id: "service",
+    id: "/service",
     name: "Services",
   },
   {
-    id: "contact",
+    id: "/contact",
     name: "Contact",
   },
   
@@ -235,8 +235,6 @@ export const socialHandles = [
 ];
 
 
-
-
 export const footer = [
   {
     
@@ -247,23 +245,23 @@ export const footer = [
       },
       {
         name: "About",
-        id: "about",
+        id: "/about",
       },
       {
         name: "Portfolio",
-        id: "portfolio",
+        id: "/portfolio",
       },
        {
         name: "UI design",
-        id: "UIdesign",
+        id: "/UIdesign",
       },
       {
         name: "Services",
-        id: "service",
+        id: "/service",
       },
       {
         name: "Contact",
-        id: "contact",
+        id: "/contact",
       },
     ],
   },

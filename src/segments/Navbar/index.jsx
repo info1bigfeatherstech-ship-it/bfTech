@@ -1,9 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import IgniteLogo from '../../components/IgniteLogo';
 import { navRoutes } from '../../data';
 import { NavLink } from 'react-router-dom';
-import Socials from '../../components/Socials';
+import SocialMenu from '../../components/SocialMenu';
 import { CgMenuRight } from 'react-icons/cg';
 import Sidebar from '../../components/Sidebar';
 import { convertHexToRgba } from '../../util';
@@ -12,7 +12,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const [drop, setDrop] = useState(false);
 
-  const DropNavbar = () => {
+  const handleScroll = () => {
     if (window.scrollY > 200) {
       setDrop(true);
     } else {
@@ -20,12 +20,11 @@ function Navbar() {
     }
   };
 
-  useMemo(() => {
-    window.addEventListener('scroll', DropNavbar);
-    return () => {
-      window.removeEventListener('scroll', DropNavbar);
-    };
-  });
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -47,8 +46,7 @@ function Navbar() {
           {navRoutes.map((route, index) => (
             <NavLink
               to={route.id}
-              className="route"
-              activeClassName="active"
+              className={({ isActive }) => `route${isActive ? ' active' : ''}`}
               key={index}
             >
               {route.name}
@@ -56,7 +54,7 @@ function Navbar() {
           ))}
         </div>
 
-        <Socials />
+        <SocialMenu />
 
         {/* Toggle Menu for Mobile */}
         <div className="menu" onClick={() => setOpen(true)}>
